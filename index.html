@@ -10,17 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Embed the ElevenLabs widget natively inline inside the card */
-        .ai-card-body {
+        /* Force ElevenLabs floating widget element to un-fix itself and live static inside the card */
+        .ai-embedded-box {
             position: relative;
-            min-height: 120px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        elevenlabs-convai {
-            display: block;
+            min-height: 280px;
             width: 100%;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .ai-embedded-box iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+            border-radius: 12px;
+        }
+
+        /* Override floating position for the custom web component */
+        elevenlabs-convai {
+            position: relative !important;
+            bottom: auto !important;
+            right: auto !important;
+            margin: 0 auto;
+            display: flex !important;
+            justify-content: center;
         }
     </style>
 </head>
@@ -177,7 +190,7 @@
                         </div>
                         <div>
                             <h2 class="text-base font-bold text-slate-100">Srinjoy's AI Assistant</h2>
-                            <p class="text-[11px] text-slate-400">Ask questions about my background & skills in real-time.</p>
+                            <p class="text-[11px] text-slate-400">Talk or chat with my AI assistant in real-time.</p>
                         </div>
                     </div>
                     <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-medium">
@@ -185,9 +198,13 @@
                     </span>
                 </div>
 
-                <!-- Natively Embedded AI Call Widget Body -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 ai-card-body">
-                    <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
+                <!-- Clean Inline Embedded Box Container -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-2 ai-embedded-box">
+                    <iframe 
+                        src="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" 
+                        allow="microphone"
+                        title="Srinjoy AI Assistant">
+                    </iframe>
                 </div>
             </div>
 
@@ -233,9 +250,6 @@
         </div>
 
     </div>
-
-    <!-- ELEVENLABS CONVERSATIONAL WIDGET SCRIPT -->
-    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
 </body>
 </html>
