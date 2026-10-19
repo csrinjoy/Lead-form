@@ -8,8 +8,24 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Push the ElevenLabs widget up slightly on mobile so it doesn't block buttons */
+        elevenlabs-convai {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        @media (max-width: 640px) {
+            elevenlabs-convai {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex items-center justify-center p-4 pb-24 md:p-4">
 
     <div class="max-w-xl w-full bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl">
         
@@ -49,7 +65,7 @@
             <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
                 <i class="fa-solid fa-headset text-yellow-500"></i> Get in Touch
             </h2>
-            <p class="text-xs text-slate-400">Have a project or opportunity? Drop me a message below or speak with my AI Voice Agent in the bottom right corner.</p>
+            <p class="text-xs text-slate-400">Have a project or opportunity? Drop me a message below or speak with my AI Voice Agent!</p>
         </div>
 
         <!-- FormSubmit Action -->
