@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Style the embedded ElevenLabs widget so it fits nicely inside our custom card container */
-        .ai-widget-container {
-            width: 100%;
-            min-height: 220px;
+        /* Embed the ElevenLabs widget natively inline inside the card */
+        .ai-card-body {
+            position: relative;
+            min-height: 120px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
         }
         elevenlabs-convai {
             display: block;
@@ -170,7 +170,7 @@
 
             <!-- EMBEDDED AI VOICE & CHAT AGENT SECTION -->
             <div class="bg-slate-800 border border-yellow-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
-                <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-3">
+                <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-4">
                     <div class="flex items-center gap-2.5">
                         <div class="w-9 h-9 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-base">
                             <i class="fa-solid fa-robot"></i>
@@ -185,14 +185,9 @@
                     </span>
                 </div>
 
-                <!-- Direct In-Page ElevenLabs Widget Box -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center">
-                    <p class="text-xs text-slate-300 mb-3">
-                        Click below to voice-call or chat directly with my AI agent right here on the page:
-                    </p>
-                    <div class="ai-widget-container">
-                        <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
-                    </div>
+                <!-- Natively Embedded AI Call Widget Body -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 ai-card-body">
+                    <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
                 </div>
             </div>
 
