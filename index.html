@@ -8,6 +8,21 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Style the embedded ElevenLabs widget so it fits nicely inside our custom card container */
+        .ai-widget-container {
+            width: 100%;
+            min-height: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        elevenlabs-convai {
+            display: block;
+            width: 100%;
+        }
+    </style>
 </head>
 <body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 md:p-6 lg:p-8">
 
@@ -170,15 +185,14 @@
                     </span>
                 </div>
 
-                <!-- Direct Call & Chat Launch Card -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center flex flex-col items-center justify-center space-y-3">
-                    <p class="text-xs text-slate-300 max-w-sm">
-                        Start a live voice call or chat directly with my interactive AI assistant to explore my technical experience.
+                <!-- Direct In-Page ElevenLabs Widget Box -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center">
+                    <p class="text-xs text-slate-300 mb-3">
+                        Click below to voice-call or chat directly with my AI agent right here on the page:
                     </p>
-                    
-                    <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2.5 px-5 rounded-xl transition shadow-lg">
-                        <i class="fa-solid fa-phone-volume"></i> Launch Voice Call & Interactive Chat
-                    </a>
+                    <div class="ai-widget-container">
+                        <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
+                    </div>
                 </div>
             </div>
 
@@ -226,7 +240,6 @@
     </div>
 
     <!-- ELEVENLABS CONVERSATIONAL WIDGET SCRIPT -->
-    <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
 </body>
