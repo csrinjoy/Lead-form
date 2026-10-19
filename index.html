@@ -8,24 +8,8 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        /* Custom positioning for ElevenLabs Voice Agent to prevent blocking interactive elements */
-        elevenlabs-convai {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            z-index: 9999;
-        }
-        @media (max-width: 640px) {
-            elevenlabs-convai {
-                bottom: 15px;
-                right: 15px;
-            }
-        }
-    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-start p-4 pb-28 md:p-8">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-start p-4 pb-12 md:p-8">
 
     <div class="max-w-3xl w-full space-y-6">
         
@@ -54,9 +38,9 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap justify-center gap-3 mt-6">
-                <button onclick="downloadResume()" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-lg cursor-pointer">
-                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-                </button>
+                <a href="https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy%20Chatterjee%20CV.docx" download="Srinjoy_Chatterjee_CV.docx" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-lg">
+                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume (.docx)
+                </a>
                 <a href="https://www.linkedin.com/in/srinjoy-chatterjee-06a58012a" target="_blank" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-yellow-400 text-xs font-bold py-2.5 px-4 rounded-xl border border-slate-600 transition shadow">
                     <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
                 </a>
@@ -160,13 +144,42 @@
             </div>
         </div>
 
+        <!-- EMBEDDED AI VOICE & CHAT AGENT SECTION -->
+        <div class="bg-slate-800 border border-yellow-500/40 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
+            <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-lg">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-lg font-bold text-slate-100">AI Voice & Chat Assistant</h2>
+                        <p class="text-xs text-slate-400">Ask questions about my experience, skills, and projects in real-time.</p>
+                    </div>
+                </div>
+                <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                </span>
+            </div>
+
+            <!-- Direct Call & Chat Launch Card -->
+            <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 text-center flex flex-col items-center justify-center space-y-4">
+                <p class="text-xs text-slate-300 max-w-md">
+                    Start a live hands-free voice call or type questions directly into my AI Assistant to learn more about my background.
+                </p>
+                
+                <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-sm font-bold py-3 px-6 rounded-xl transition shadow-lg">
+                    <i class="fa-solid fa-phone-volume"></i> Launch Voice Call & Interactive Chat
+                </a>
+            </div>
+        </div>
+
         <!-- CONTACT FORM SECTION -->
         <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl">
             <div class="mb-4">
                 <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
                     <i class="fa-solid fa-headset text-yellow-500"></i> Get in Touch
                 </h2>
-                <p class="text-xs text-slate-400">Drop me a message below or speak directly to my AI Voice Agent!</p>
+                <p class="text-xs text-slate-400">Have a project or opportunity? Drop me a direct message below.</p>
             </div>
 
             <form action="https://formsubmit.co/3a2d72a0652dd56b0572cbfc86580fb9" method="POST" class="space-y-4">
@@ -201,44 +214,9 @@
 
     </div>
 
-    <!-- ELEVENLABS VOICE AGENT WIDGET -->
+    <!-- ELEVENLABS CONVERSATIONAL WIDGET SCRIPT -->
     <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
     <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
-    <!-- SCRIPT TO GENERATE ON-THE-FLY MOBILE RESUME DOWNLOAD -->
-    <script>
-        function downloadResume() {
-            const resumeText = `SRINJOY CHATTERJEE
-Microsoft Dynamics 365 CE Developer & Architect
-LinkedIn: https://www.linkedin.com/in/srinjoy-chatterjee-06a58012a
-
-EDUCATION:
-- MS in Computer Science, Long Beach State University (2020-2022)
-- B.Tech in Computer Science and Engineering, VIT Vellore (2013-2017)
-
-SKILL SET:
-Dynamics 365 CRM Sales, business rules, C#, .NET framework WebAPI custom plugin, JavaScript, power automate, oob workflows, power pages, sql db, ssms.
-
-WORK EXPERIENCE:
-1. Dynamics 365 CRM Architect @ AltaMed Health Services (Dec 2024 - Present)
-2. Software Engineer @ Foundation Building Materials (Aug 2023 - Dec 2024)
-3. Software Engineer @ Microsoft (Aug 2022 - Jul 2023)
-4. Software Developer @ Toshiba Software India (Aug 2017 - Jun 2020)
-
-PUBLICATIONS & LEADERSHIP:
-- Detection of Malaria Parasites in Thin Blood Smears Using CNN-Based Approach
-  (https://link.springer.com/chapter/10.1007/978-981-15-8610-1_3)`;
-
-            const blob = new Blob([resumeText], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Srinjoy_Chatterjee_Resume.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            window.URL.revokeObjectURL(url);
-        }
-    </script>
 </body>
 </html>
