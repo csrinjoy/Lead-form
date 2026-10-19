@@ -9,207 +9,218 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-start p-4 pb-12 md:p-8">
+<body class="bg-slate-900 text-slate-100 min-h-screen flex flex-col items-center justify-center p-4 md:p-6 lg:p-8">
 
-    <div class="max-w-3xl w-full space-y-6">
+    <!-- MAIN TWO-COLUMN GRID CONTAINER -->
+    <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
         
-        <!-- HEADER / PROFILE CARD -->
-        <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl text-center">
-            <div class="w-20 h-20 bg-yellow-500 rounded-full mx-auto flex items-center justify-center text-slate-900 text-3xl font-bold mb-4 shadow-lg">
-                <i class="fa-solid fa-code"></i>
-            </div>
-            <h1 class="text-3xl md:text-4xl font-black text-yellow-400">Srinjoy Chatterjee</h1>
-            <p class="text-base font-semibold text-slate-200 mt-1">Microsoft Dynamics 365 CE Developer & Architect</p>
-            <p class="text-xs text-slate-400 mt-2 max-w-xl mx-auto leading-relaxed">
-                Specializing in CRM Integration, Vibe Coding Cleanup, Agentic AI, C#, JavaScript, Power Automate, Power Pages, Plugins, and PCF Controls.
-            </p>
-
-            <!-- Skills Badges -->
-            <div class="flex flex-wrap justify-center gap-2 mt-4">
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">D365 CE</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">Vibe Coding Cleanup</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">C# / Plugins</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">JavaScript</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">Power Automate</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">Agentic AI</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">Power Pages</span>
-                <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-xs px-2.5 py-1 rounded-md">PCF Controls</span>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mt-6">
-                <a href="https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy%20Chatterjee%20CV.docx" download="Srinjoy_Chatterjee_CV.docx" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2.5 px-4 rounded-xl transition shadow-lg">
-                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume (.docx)
-                </a>
-                <a href="https://www.linkedin.com/in/srinjoy-chatterjee-06a58012a" target="_blank" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-yellow-400 text-xs font-bold py-2.5 px-4 rounded-xl border border-slate-600 transition shadow">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn Profile
-                </a>
-            </div>
-        </div>
-
-        <!-- EMBEDDED NEAT RESUME SECTION -->
-        <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl space-y-6">
-            <h2 class="text-xl font-bold text-yellow-400 border-b border-slate-700 pb-3 flex items-center gap-2">
-                <i class="fa-solid fa-file-lines"></i> Interactive Resume
-            </h2>
-
-            <!-- Education -->
-            <div>
-                <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Education</h3>
-                <div class="space-y-2">
-                    <div class="bg-slate-900 p-3 rounded-lg border border-slate-700/50">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-slate-200">Long Beach State University, Long Beach</span>
-                            <span class="text-xs text-yellow-400 font-mono">2020 - 2022</span>
-                        </div>
-                        <p class="text-xs text-slate-400">MS in Computer Science (2022)</p>
-                    </div>
-                    <div class="bg-slate-900 p-3 rounded-lg border border-slate-700/50">
-                        <div class="flex justify-between items-center">
-                            <span class="font-bold text-slate-200">Vellore Institute of Technology (VIT), Vellore</span>
-                            <span class="text-xs text-yellow-400 font-mono">2013 - 2017</span>
-                        </div>
-                        <p class="text-xs text-slate-400">B.Tech in Computer Science and Engineering (2017)</p>
-                    </div>
+        <!-- ================= LEFT COLUMN ================= -->
+        <div class="space-y-6">
+            
+            <!-- HEADER / PROFILE CARD -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl text-center">
+                <div class="w-16 h-16 bg-yellow-500 rounded-full mx-auto flex items-center justify-center text-slate-900 text-2xl font-bold mb-3 shadow-lg">
+                    <i class="fa-solid fa-code"></i>
                 </div>
-            </div>
-
-            <!-- Experience -->
-            <div>
-                <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-3">Work Experience</h3>
-                <div class="space-y-4">
-                    <!-- Role 1 -->
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700/50">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
-                            <h4 class="font-bold text-slate-100">Dynamics 365 CRM Architect <span class="text-yellow-400">@ AltaMed Health Services</span></h4>
-                            <span class="text-xs text-yellow-400 font-mono">Dec 2024 - Present</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Collaborate with business teams, field representatives, and physicians to gather requirements, design system solutions, and oversee development. Manage integration of CRM with external applications and Dataverse. Create Power BI & Dynamics dashboards, author C# .NET plugins, and oversee testing, QA, and production releases across Sales and Marketing modules.
-                        </p>
-                    </div>
-
-                    <!-- Role 2 -->
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700/50">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
-                            <h4 class="font-bold text-slate-100">Software Engineer <span class="text-yellow-400">@ Foundation Building Materials</span></h4>
-                            <span class="text-xs text-yellow-400 font-mono">Aug 2023 - Dec 2024</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Full-stack web developer using Dynamics 365 CRM, Power Automate, C#, Python, HTML5, CSS3, JavaScript, and SSMS. Built custom Sales CRM app catching web leads, converting them into opportunities. Executed cross-platform integrations with ERP and non-ERP systems (Gravity Forms).
-                        </p>
-                    </div>
-
-                    <!-- Role 3 -->
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700/50">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
-                            <h4 class="font-bold text-slate-100">Software Engineer <span class="text-yellow-400">@ Microsoft</span></h4>
-                            <span class="text-xs text-yellow-400 font-mono">Aug 2022 - Jul 2023</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Full-stack developer working on web applications powering global Azure data center construction workflows. Handled complete lifecycle from land acquisition to energy provisioning and construction tracking using Azure DevOps and end-to-end testing setups.
-                        </p>
-                    </div>
-
-                    <!-- Role 4 -->
-                    <div class="bg-slate-900 p-4 rounded-xl border border-slate-700/50">
-                        <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-1 mb-2">
-                            <h4 class="font-bold text-slate-100">Software Developer <span class="text-yellow-400">@ Toshiba Software India</span></h4>
-                            <span class="text-xs text-yellow-400 font-mono">Aug 2017 - Jun 2020</span>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            Developed printing applications hosted on Web and Multi-Functional Peripherals (eSuite) using C#, Java, D365 CRM, JQuery, JavaScript, and HTML. Followed Agile methodologies serving international clients across Canada, China, Malaysia, and Sri Lanka.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Leadership & Publications -->
-            <div>
-                <h3 class="text-xs uppercase tracking-wider text-slate-400 font-bold mb-2">Leadership & Research</h3>
-                <ul class="text-xs text-slate-300 space-y-2 bg-slate-900 p-4 rounded-xl border border-slate-700/50">
-                    <li class="flex items-start gap-2">
-                        <i class="fa-solid fa-book-bookmark text-yellow-500 mt-0.5"></i>
-                        <span>Published research paper: <a href="https://link.springer.com/chapter/10.1007/978-981-15-8610-1_3" target="_blank" class="text-yellow-400 underline">"Detection of Malaria Parasites in Thin Blood Smears Using CNN-Based Approach"</a>.</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fa-solid fa-microchip text-yellow-500 mt-0.5"></i>
-                        <span>AWS IoT Greengrass Project: Overview of Safety Issues in Autonomous Vehicles and Countermeasures.</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <i class="fa-solid fa-shield-halved text-yellow-500 mt-0.5"></i>
-                        <span>Final Year Project: "Security Evaluation of Pattern Classifiers Under Attack" utilizing Bayes Theorem in C# .NET.</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- EMBEDDED AI VOICE & CHAT AGENT SECTION -->
-        <div class="bg-slate-800 border border-yellow-500/40 rounded-2xl p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <div class="flex items-center justify-between border-b border-slate-700 pb-4 mb-4">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-lg">
-                        <i class="fa-solid fa-robot"></i>
-                    </div>
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-100">Srinjoy's AI Assistant</h2>
-                        <p class="text-xs text-slate-400">Ask questions about my experience, skills, and projects in real-time.</p>
-                    </div>
-                </div>
-                <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Online
-                </span>
-            </div>
-
-            <!-- Direct Call & Chat Launch Card -->
-            <div class="bg-slate-900 border border-slate-700 rounded-xl p-5 text-center flex flex-col items-center justify-center space-y-4">
-                <p class="text-xs text-slate-300 max-w-md">
-                    Start a live hands-free voice call or type questions directly into my AI Assistant to learn more about my background.
+                <h1 class="text-2xl md:text-3xl font-black text-yellow-400">Srinjoy Chatterjee</h1>
+                <p class="text-xs md:text-sm font-semibold text-slate-200 mt-1">Microsoft Dynamics 365 CE Developer & Architect</p>
+                <p class="text-xs text-slate-400 mt-2 max-w-xl mx-auto leading-relaxed">
+                    Specializing in CRM Integration, Vibe Coding Cleanup, Agentic AI, C#, JavaScript, Power Automate, Power Pages, Plugins, and PCF Controls.
                 </p>
-                
-                <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-sm font-bold py-3 px-6 rounded-xl transition shadow-lg">
-                    <i class="fa-solid fa-phone-volume"></i> Launch Voice Call & Interactive Chat
-                </a>
+
+                <!-- Skills Badges -->
+                <div class="flex flex-wrap justify-center gap-1.5 mt-3">
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">D365 CE</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">Vibe Coding Cleanup</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">C# / Plugins</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">JavaScript</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">Power Automate</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">Agentic AI</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">Power Pages</span>
+                    <span class="bg-slate-900 border border-slate-700 text-yellow-400 text-[11px] px-2 py-0.5 rounded-md">PCF Controls</span>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap justify-center gap-2.5 mt-4">
+                    <a href="https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy%20Chatterjee%20CV.docx" download="Srinjoy_Chatterjee_CV.docx" target="_blank" class="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2 px-3.5 rounded-xl transition shadow-lg">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume (.docx)
+                    </a>
+                    <a href="https://www.linkedin.com/in/srinjoy-chatterjee-06a58012a" target="_blank" class="inline-flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-yellow-400 text-xs font-bold py-2 px-3.5 rounded-xl border border-slate-600 transition shadow">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
             </div>
+
+            <!-- EMBEDDED NEAT RESUME SECTION -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl space-y-4">
+                <h2 class="text-lg font-bold text-yellow-400 border-b border-slate-700 pb-2 flex items-center gap-2">
+                    <i class="fa-solid fa-file-lines"></i> Interactive Resume
+                </h2>
+
+                <!-- Education -->
+                <div>
+                    <h3 class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-1.5">Education</h3>
+                    <div class="space-y-1.5">
+                        <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-700/50 text-xs">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-slate-200">Long Beach State University</span>
+                                <span class="text-yellow-400 font-mono text-[11px]">2020 - 2022</span>
+                            </div>
+                            <p class="text-slate-400 text-[11px]">MS in Computer Science</p>
+                        </div>
+                        <div class="bg-slate-900 p-2.5 rounded-lg border border-slate-700/50 text-xs">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-slate-200">VIT Vellore</span>
+                                <span class="text-yellow-400 font-mono text-[11px]">2013 - 2017</span>
+                            </div>
+                            <p class="text-slate-400 text-[11px]">B.Tech in Computer Science and Engineering</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div>
+                    <h3 class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-2">Work Experience</h3>
+                    <div class="space-y-2.5">
+                        <!-- Role 1 -->
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700/50">
+                            <div class="flex justify-between items-center gap-1 mb-1">
+                                <h4 class="font-bold text-slate-100 text-xs">Dynamics 365 CRM Architect <span class="text-yellow-400">@ AltaMed</span></h4>
+                                <span class="text-[10px] text-yellow-400 font-mono">Dec 2024 - Present</span>
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Gather requirements, design system solutions, manage Dataverse integrations, build Power BI & Dynamics dashboards, and write C# .NET plugins.
+                            </p>
+                        </div>
+
+                        <!-- Role 2 -->
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700/50">
+                            <div class="flex justify-between items-center gap-1 mb-1">
+                                <h4 class="font-bold text-slate-100 text-xs">Software Engineer <span class="text-yellow-400">@ Foundation Building Materials</span></h4>
+                                <span class="text-[10px] text-yellow-400 font-mono">Aug 2023 - Dec 2024</span>
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Full-stack developer with D365 CRM, Power Automate, C#, Python, JavaScript. Built web lead capture and cross-platform ERP integrations.
+                            </p>
+                        </div>
+
+                        <!-- Role 3 -->
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700/50">
+                            <div class="flex justify-between items-center gap-1 mb-1">
+                                <h4 class="font-bold text-slate-100 text-xs">Software Engineer <span class="text-yellow-400">@ Microsoft</span></h4>
+                                <span class="text-[10px] text-yellow-400 font-mono">Aug 2022 - Jul 2023</span>
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Developed web apps powering global Azure data center construction workflows, land acquisition, and energy provisioning tracking.
+                            </p>
+                        </div>
+
+                        <!-- Role 4 -->
+                        <div class="bg-slate-900 p-3 rounded-xl border border-slate-700/50">
+                            <div class="flex justify-between items-center gap-1 mb-1">
+                                <h4 class="font-bold text-slate-100 text-xs">Software Developer <span class="text-yellow-400">@ Toshiba Software India</span></h4>
+                                <span class="text-[10px] text-yellow-400 font-mono">Aug 2017 - Jun 2020</span>
+                            </div>
+                            <p class="text-[11px] text-slate-300 leading-relaxed">
+                                Developed web & printer applications (eSuite) using C#, Java, D365 CRM, and JavaScript for international enterprise clients.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership & Publications -->
+                <div>
+                    <h3 class="text-[11px] uppercase tracking-wider text-slate-400 font-bold mb-1.5">Leadership & Research</h3>
+                    <ul class="text-[11px] text-slate-300 space-y-1.5 bg-slate-900 p-3 rounded-xl border border-slate-700/50">
+                        <li class="flex items-start gap-1.5">
+                            <i class="fa-solid fa-book-bookmark text-yellow-500 mt-0.5"></i>
+                            <span>Published paper: <a href="https://link.springer.com/chapter/10.1007/978-981-15-8610-1_3" target="_blank" class="text-yellow-400 underline">"Detection of Malaria Parasites Using CNN"</a>.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <i class="fa-solid fa-microchip text-yellow-500 mt-0.5"></i>
+                            <span>AWS IoT Greengrass: Autonomous Vehicles Safety & Countermeasures.</span>
+                        </li>
+                        <li class="flex items-start gap-1.5">
+                            <i class="fa-solid fa-shield-halved text-yellow-500 mt-0.5"></i>
+                            <span>Pattern Classifiers Security Evaluation using Bayes Theorem in C# .NET.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
 
-        <!-- CONTACT FORM SECTION -->
-        <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 md:p-8 shadow-2xl">
-            <div class="mb-4">
-                <h2 class="text-lg font-bold text-slate-100 flex items-center gap-2">
-                    <i class="fa-solid fa-headset text-yellow-500"></i> Get in Touch
-                </h2>
-                <p class="text-xs text-slate-400">Have a project or opportunity? Drop me a direct message below.</p>
+        <!-- ================= RIGHT COLUMN ================= -->
+        <div class="space-y-6">
+
+            <!-- EMBEDDED AI VOICE & CHAT AGENT SECTION -->
+            <div class="bg-slate-800 border border-yellow-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-3">
+                    <div class="flex items-center gap-2.5">
+                        <div class="w-9 h-9 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-base">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-base font-bold text-slate-100">Srinjoy's AI Assistant</h2>
+                            <p class="text-[11px] text-slate-400">Ask questions about my background & skills in real-time.</p>
+                        </div>
+                    </div>
+                    <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-medium">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Online
+                    </span>
+                </div>
+
+                <!-- Direct Call & Chat Launch Card -->
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center flex flex-col items-center justify-center space-y-3">
+                    <p class="text-xs text-slate-300 max-w-sm">
+                        Start a live voice call or chat directly with my interactive AI assistant to explore my technical experience.
+                    </p>
+                    
+                    <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-slate-900 text-xs font-bold py-2.5 px-5 rounded-xl transition shadow-lg">
+                        <i class="fa-solid fa-phone-volume"></i> Launch Voice Call & Interactive Chat
+                    </a>
+                </div>
             </div>
 
-            <form action="https://formsubmit.co/3a2d72a0652dd56b0572cbfc86580fb9" method="POST" class="space-y-4">
-                <input type="hidden" name="_template" value="table">
+            <!-- CONTACT FORM SECTION -->
+            <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl">
+                <div class="mb-3">
+                    <h2 class="text-base font-bold text-slate-100 flex items-center gap-2">
+                        <i class="fa-solid fa-headset text-yellow-500"></i> Get in Touch
+                    </h2>
+                    <p class="text-xs text-slate-400">Have a project or opportunity? Send me a direct message below.</p>
+                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
-                        <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="John Doe">
+                <form action="https://formsubmit.co/3a2d72a0652dd56b0572cbfc86580fb9" method="POST" class="space-y-3">
+                    <input type="hidden" name="_template" value="table">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-300 mb-1">Full Name</label>
+                            <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-semibold text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" name="phone" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="+1 000 000 0000">
+                        </div>
                     </div>
+
                     <div>
-                        <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
-                        <input type="tel" name="phone" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="+1 000 000 0000">
+                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">Email Address</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="john@example.com">
                     </div>
-                </div>
 
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
-                    <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="john@example.com">
-                </div>
+                    <div>
+                        <label class="block text-[11px] font-semibold text-slate-300 mb-1">Inquiry / Message</label>
+                        <textarea name="message" rows="4" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="Discussing a Dynamics 365 implementation project..."></textarea>
+                    </div>
 
-                <div>
-                    <label class="block text-xs font-semibold text-slate-300 mb-1">Inquiry / Message</label>
-                    <textarea name="message" rows="3" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-slate-100 focus:outline-none focus:border-yellow-400" placeholder="Discussing a Dynamics 365 implementation project..."></textarea>
-                </div>
+                    <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-2.5 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-xs mt-1">
+                        <i class="fa-solid fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
 
-                <button type="submit" class="w-full bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-bold py-3 px-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2 text-sm mt-2">
-                    <i class="fa-solid fa-paper-plane"></i> Send Message
-                </button>
-            </form>
         </div>
 
     </div>
