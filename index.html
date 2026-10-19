@@ -10,30 +10,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* Force ElevenLabs floating widget element to un-fix itself and live static inside the card */
-        .ai-embedded-box {
-            position: relative;
-            min-height: 280px;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        
-        .ai-embedded-box iframe {
-            width: 100%;
-            height: 280px;
-            border: none;
-            border-radius: 12px;
+        /* 
+          CRITICAL OVERRIDE: 
+          Force ElevenLabs widget shadow-root container to anchor strictly at TOP RIGHT.
+          This prevents it from overlaying or interfering with bottom-right elements like the form submit button.
+        */
+        elevenlabs-convai {
+            position: fixed !important;
+            top: 20px !important;
+            right: 20px !important;
+            bottom: auto !important;
+            left: auto !important;
+            z-index: 9999 !important;
         }
 
-        /* Override floating position for the custom web component */
-        elevenlabs-convai {
-            position: relative !important;
-            bottom: auto !important;
-            right: auto !important;
-            margin: 0 auto;
-            display: flex !important;
-            justify-content: center;
+        /* Responsive safety for very small mobile screens */
+        @media (max-width: 640px) {
+            elevenlabs-convai {
+                top: 10px !important;
+                right: 10px !important;
+            }
         }
     </style>
 </head>
@@ -181,16 +177,16 @@
         <!-- ================= RIGHT COLUMN ================= -->
         <div class="space-y-6">
 
-            <!-- EMBEDDED AI VOICE & CHAT AGENT SECTION -->
+            <!-- SRINJOY'S AI ASSISTANT SECTION CARD -->
             <div class="bg-slate-800 border border-yellow-500/40 rounded-2xl p-6 shadow-2xl relative overflow-hidden">
-                <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-4">
+                <div class="flex items-center justify-between border-b border-slate-700 pb-3 mb-3">
                     <div class="flex items-center gap-2.5">
                         <div class="w-9 h-9 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center text-yellow-400 text-base">
                             <i class="fa-solid fa-robot"></i>
                         </div>
                         <div>
                             <h2 class="text-base font-bold text-slate-100">Srinjoy's AI Assistant</h2>
-                            <p class="text-[11px] text-slate-400">Talk or chat with my AI assistant in real-time.</p>
+                            <p class="text-[11px] text-slate-400">Ask questions about my background & skills in real-time.</p>
                         </div>
                     </div>
                     <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] font-medium">
@@ -198,13 +194,11 @@
                     </span>
                 </div>
 
-                <!-- Clean Inline Embedded Box Container -->
-                <div class="bg-slate-900 border border-slate-700 rounded-xl p-2 ai-embedded-box">
-                    <iframe 
-                        src="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" 
-                        allow="microphone"
-                        title="Srinjoy AI Assistant">
-                    </iframe>
+                <div class="bg-slate-900 border border-slate-700 rounded-xl p-4 text-center">
+                    <p class="text-xs text-slate-300">
+                        <i class="fa-solid fa-arrow-up-right-dots text-yellow-400 mr-1"></i>
+                        Click the widget in the <strong>top right corner</strong> to launch a voice call or chat session with my AI assistant.
+                    </p>
                 </div>
             </div>
 
@@ -212,7 +206,7 @@
             <div class="bg-slate-800 border border-slate-700 rounded-2xl p-6 shadow-2xl">
                 <div class="mb-3">
                     <h2 class="text-base font-bold text-slate-100 flex items-center gap-2">
-                        <i class="fa-solid fa-headset text-yellow-500"></i> Get in Touch
+                        <i class="fa-solid fa-envelope text-yellow-500"></i> Get in Touch
                     </h2>
                     <p class="text-xs text-slate-400">Have a project or opportunity? Send me a direct message below.</p>
                 </div>
@@ -250,6 +244,10 @@
         </div>
 
     </div>
+
+    <!-- ELEVENLABS CONVERSATIONAL AI FLOATING WIDGET (ANCHORED TOP RIGHT VIA CSS) -->
+    <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
 </body>
 </html>
