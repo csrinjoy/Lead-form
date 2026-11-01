@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://csrinjoy.github.io/Lead-form/sitemap.xml
