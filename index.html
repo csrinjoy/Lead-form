@@ -162,7 +162,8 @@
                     <!-- Inner Container -->
                     <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-amber-400/80 shadow-2xl bg-slate-900 group-hover:scale-105 transition duration-300">
                         <img 
-                            src="https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy.jpg" 
+                            //src="/home/pi/Downloads/Srinjoy.jpg" 
+                            src = "https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy.jpg"
                             alt="Srinjoy Chatterjee" 
                             class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-500"
                             onerror="this.onerror=null; this.src='https://placehold.co/300x300/1e293b/f59e0b?text=Srinjoy+C';"
@@ -174,7 +175,6 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-slate-900"></span>
                     </span>
-
                 </div>
 
                 <!-- HERO INTRO TEXT -->
@@ -483,17 +483,205 @@
                                 <i class="fa-solid fa-book-bookmark text-amber-400 mt-1"></i>
                                 <div>
                                     <h3 class="font-bold text-slate-100">Springer Research Publication</h3>
-                                    <p class="text-slate-300 mt-0.5">"Detection of Malaria Parasites in Thin Blood Smears Using CNN-Based App"</p>
+                                    <p class="text-slate-300 mt-0.5">"Detection of Malaria Parasites in Thin Blood Smears Using CNN-Based Approach"</p>
+                                    <a href="https://link.springer.com/chapter/10.1007/978-981-15-8610-1_3" target="_blank" onclick="triggerHaptic()" class="inline-flex items-center gap-1 text-amber-400 hover:underline text-xs mt-1.5 font-mono">
+                                        View Springer Chapter <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-shield-halved text-amber-400 mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-slate-100">Autonomous Vehicles Safety Project</h3>
+                                    <p class="text-slate-300 mt-0.5">Engineered countermeasure protocols for Autonomous Vehicle safety systems leveraging AWS IoT Greengrass.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900/90 border border-slate-800 p-3.5 rounded-xl">
+                            <div class="flex items-start gap-2">
+                                <i class="fa-solid fa-lock text-amber-400 mt-1"></i>
+                                <div>
+                                    <h3 class="font-bold text-slate-100">Pattern Classifier Security Under Attack</h3>
+                                    <p class="text-slate-300 mt-0.5">Developed optimized spam classification algorithms in C# .NET using Bayes Theorem to prevent adversarial attacks.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <!-- CONTACT FORM -->
+                <section id="contact" class="glass-card rounded-2xl p-4 sm:p-6 shadow-2xl">
+                    <div class="border-b border-slate-800 pb-3 mb-4">
+                        <h2 class="text-base sm:text-lg font-bold text-slate-100 flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-amber-400"></i> Get In Touch
+                        </h2>
+                        <p class="text-xs text-slate-400 mt-0.5">Send a direct inquiry regarding consulting, architecture, or tech roles.</p>
+                    </div>
+
+                    <form action="https://formsubmit.co/3a2d72a0652dd56b0572cbfc86580fb9" method="POST" class="space-y-3">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Full Name</label>
+                            <input type="text" name="name" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-400 transition" placeholder="e.g. Jane Doe">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Phone Number</label>
+                            <input type="tel" name="phone" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-400 transition" placeholder="+1 (000) 000-0000">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Email Address</label>
+                            <input type="email" name="email" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-400 transition" placeholder="jane@company.com">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 mb-1">Inquiry / Project Details</label>
+                            <textarea name="message" rows="3" required class="w-full bg-slate-900/90 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 focus:outline-none focus:border-amber-400 transition" placeholder="Let's discuss Dynamics 365 CE project requirements..."></textarea>
+                        </div>
+
+                        <button type="submit" 
+                                onclick="triggerHaptic()"
+                                class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-bold py-2.5 px-4 rounded-xl shadow-lg transition duration-200 flex items-center justify-center gap-2 text-xs sm:text-sm mt-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </section>
+
+                <!-- FOOTER BRANDING -->
+                <footer class="text-center text-slate-500 text-[11px] font-mono py-2">
+                    © <span id="year"></span> Srinjoy Chatterjee. All rights reserved.
+                </footer>
+
             </div>
 
         </div>
+
     </div>
 
+    <!-- ELEVENLABS FLOATING WIDGET SCRIPT -->
+    <elevenlabs-convai agent-id="agent_4201m58w4sesez5byg46t65caa6k"></elevenlabs-convai>
+    <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
+
+    <!-- INTERACTIVE SCRIPTS & CANVAS ANIMATION -->
+    <script>
+        // Set Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // 1. Haptic Feedback Helper
+        function triggerHaptic() {
+            if ("vibrate" in navigator) {
+                try {
+                    navigator.vibrate(35);
+                } catch (e) {}
+            }
+        }
+
+        // 2. Expandable Experience Accordion
+        function toggleCard(id, element) {
+            const details = document.getElementById(id + '-details');
+            const label = document.getElementById(id + '-label');
+            
+            if (details) {
+                const isHidden = details.classList.contains('hidden');
+                if (isHidden) {
+                    details.classList.remove('hidden');
+                    if (label) label.textContent = 'Collapse details';
+                } else {
+                    details.classList.add('hidden');
+                    if (label) label.textContent = 'Expand details';
+                }
+            }
+        }
+
+        // 3. Subtle 3D Card Tilt Effect on Hover
+        document.querySelectorAll('.tilt-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -4;
+                const rotateY = ((x - centerX) / centerX) * 4;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+            });
+        });
+
+        // 4. Interactive Particle Background Canvas
+        const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = (Math.random() - 0.5) * 0.4;
+                this.speedY = (Math.random() - 0.5) * 0.4;
+                this.opacity = Math.random() * 0.5 + 0.1;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+
+                if (this.x < 0) this.x = canvas.width;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.y < 0) this.y = canvas.height;
+                if (this.y > canvas.height) this.y = 0;
+            }
+
+            draw() {
+                ctx.fillStyle = `rgba(245, 158, 11, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const particleCount = Math.min(Math.floor(window.innerWidth / 20), 60);
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        window.onload = function() {
+            initParticles();
+            animateParticles();
+        };
+    </script>
 </body>
 </html>
