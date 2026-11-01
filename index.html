@@ -53,31 +53,31 @@
     </script>
 
     <style>
-        /* Floating Top-Right AI Trigger & Widget Positioning */
+        /* Responsive AI Trigger & Widget Positioning */
         #ai-floating-trigger {
-            position: fixed;
-            top: 16px;
-            right: 16px;
-            z-index: 99998;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 50;
         }
 
         elevenlabs-convai {
             position: fixed !important;
-            top: 12px !important;
-            right: 12px !important;
-            bottom: auto !important;
+            bottom: 20px !important;
+            right: 20px !important;
+            top: auto !important;
             left: auto !important;
             z-index: 99999 !important;
         }
 
         @media (max-width: 640px) {
             #ai-floating-trigger {
-                top: 8px;
-                right: 8px;
+                top: 12px;
+                right: 12px;
             }
             elevenlabs-convai {
-                transform: scale(0.65);
-                transform-origin: top right;
+                transform: scale(0.85);
+                transform-origin: bottom right;
             }
         }
 
@@ -128,27 +128,28 @@
     <canvas id="particleCanvas" class="fixed inset-0 pointer-events-none z-0 opacity-40"></canvas>
     <div class="fixed inset-0 glow-mesh pointer-events-none z-0"></div>
 
-    <!-- FLOATING TOP-RIGHT AI VOICE CALL TRIGGER -->
-    <div id="ai-floating-trigger" class="flex items-center gap-2">
-        <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" 
-           target="_blank" 
-           onclick="triggerHaptic()"
-           class="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold px-3.5 py-2 rounded-full text-xs shadow-xl shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105 transition duration-200 border border-amber-300/40">
-            <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-950"></span>
-            </span>
-            <i class="fa-solid fa-phone-volume group-hover:rotate-12 transition duration-300"></i>
-            <span class="hidden sm:inline">Start AI Voice Call</span>
-            <span class="sm:hidden">AI Voice</span>
-        </a>
-    </div>
-
     <!-- Main Container -->
     <div class="relative z-10 max-w-7xl mx-auto px-3 py-4 sm:px-6 sm:py-8">
 
         <!-- HEADER HERO BRANDING -->
-        <header class="glass-card rounded-2xl p-4 sm:p-8 mb-6 shadow-2xl relative overflow-hidden transition-all duration-300">
+        <header class="glass-card rounded-2xl p-4 sm:p-8 pt-12 sm:pt-8 mb-6 shadow-2xl relative overflow-hidden transition-all duration-300">
+            
+            <!-- AI VOICE CALL TRIGGER IN HEADER -->
+            <div id="ai-floating-trigger">
+                <a href="https://elevenlabs.io/app/talk-to?agent_id=agent_4201m58w4sesez5byg46t65caa6k&branch_id=agtbrch_7701m58w4vgvevhs4sz9rzzgjaby" 
+                   target="_blank" 
+                   onclick="triggerHaptic()"
+                   class="group inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-extrabold px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-full text-xs shadow-xl shadow-amber-500/20 hover:shadow-amber-500/40 hover:scale-105 transition duration-200 border border-amber-300/40">
+                    <span class="relative flex h-2.5 w-2.5">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-slate-950 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-slate-950"></span>
+                    </span>
+                    <i class="fa-solid fa-phone-volume group-hover:rotate-12 transition duration-300"></i>
+                    <span class="hidden sm:inline">Start AI Voice Call</span>
+                    <span class="sm:hidden">AI Voice</span>
+                </a>
+            </div>
+
             <!-- Decorative Accent Elements -->
             <div class="absolute -top-16 -right-16 w-32 h-32 sm:w-48 sm:h-48 bg-amber-500/10 rounded-full blur-2xl pointer-events-none"></div>
             
@@ -162,8 +163,7 @@
                     <!-- Inner Container -->
                     <div class="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-amber-400/80 shadow-2xl bg-slate-900 group-hover:scale-105 transition duration-300">
                         <img 
-                            
-                            src = "https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy.jpg"
+                            src="https://raw.githubusercontent.com/csrinjoy/Lead-form/main/Srinjoy.jpg"
                             alt="Srinjoy Chatterjee" 
                             class="w-full h-full object-cover object-center group-hover:scale-110 transition duration-500"
                             onerror="this.onerror=null; this.src='https://placehold.co/300x300/1e293b/f59e0b?text=Srinjoy+C';"
